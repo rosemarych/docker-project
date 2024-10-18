@@ -1,0 +1,8 @@
+FROM node.js
+RUN apt update
+RUN apt install npm -y
+WORKDIR /usr/src/app
+COPY . . 
+EXPOSE 3000
+ENV car=benz
+CMD ["node", "server.js"]
